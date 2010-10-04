@@ -26,7 +26,7 @@ else
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/cakephp-#{node[:cakephp][:version]}.tar.gz" do
-  source "http://cakeforge.org/frs/download.php/734/cake_#{node[:cakephp][:version]}.tar.gz/donation=complete"
+  source "http://github.com/cakephp/cakephp/tarball/#{node[:cakephp][:version]}"
   mode "0644"
 end
 

@@ -23,7 +23,7 @@ The openssl library is required from the openssl cookbook to generate secure pas
 
 = ATTRIBUTES:
 
-* cakephp[:version] - Set the version to download, (e.g. "1.2.5").
+* cakephp[:version] - Set the version to download, (e.g. "1.3.4").
 * cakephp[:dir] - Set the location to place cakephp files. Default is /var/www.
 * cakephp[:db][:database] - CakePHP will use this MySQL database to store its data.
 * cakephp[:db][:user] - CakePHP will connect to MySQL using this user.

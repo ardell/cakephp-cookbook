@@ -19,7 +19,7 @@
 #
 
 # General settings
-default[:cakephp][:version] = "1.2.5"
+default[:cakephp][:version] = "1.3.4"
 default[:cakephp][:dir] = "/var/www/cakephp"
 default[:cakephp][:db][:database] = "cakephpdb"
 default[:cakephp][:db][:user] = "cakephpuser"
