@@ -1,6 +1,6 @@
 = DESCRIPTION:
 
-Installs and configures CakePHP according to the instructions at http://book.cakephp.org/view/308/Installing-CakePHP.
+Installs and configures CakePHP according to the instructions at http://book.cakephp.org/2.0/en/installation.html.
 
 = REQUIREMENTS:
 
@@ -23,7 +23,7 @@ The openssl library is required from the openssl cookbook to generate secure pas
 
 = ATTRIBUTES:
 
-* cakephp[:version] - Set the version to download, (e.g. "1.3.4").
+* cakephp[:version] - Set the version to download, (e.g. "2.4.3").
 * cakephp[:dir] - Set the location to place cakephp files. Default is /var/www.
 * cakephp[:db][:database] - CakePHP will use this MySQL database to store its data.
 * cakephp[:db][:user] - CakePHP will connect to MySQL using this user.
@@ -35,7 +35,7 @@ The random generation is handled with the secure_password method in the openssl 
 
 Add the "cakephp" recipe to your node's run list or role, or include the recipe in another cookbook.
 
-Chef will install and configure mysql, php, and apache2 according to the instructions at http://book.cakephp.org/view/308/Installing-CakePHP.
+Chef will install and configure mysql, php, and apache2 according to the instructions at http://book.cakephp.org/2.0/en/installation.html.
 
 The mysql::server recipe needs to come first, and contain an execute resource to install mysql privileges from the grants.sql template in this cookbook.
 
