@@ -2,12 +2,8 @@ maintainer       "Jason Ardell"
 maintainer_email "ardell@gmail.com"
 license          "Apache 2.0"
 description      "Installs/Configures CakePHP"
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
-version          "0.0.1"
-depends          "php"
-depends          "apache2"
-depends          "mysql"
-depends          "openssl"
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          "0.0.2"
 
 recipe "cakephp", "Installs and configures CakePHP LAMP stack on a single system"
 
@@ -15,10 +11,14 @@ recipe "cakephp", "Installs and configures CakePHP LAMP stack on a single system
   supports os
 end
 
+%w{ apache2 php mysql openssl }.each do |d|
+  depends d
+end
+
 attribute "cakephp/version",
   :display_name => "CakePHP download version",
   :description => "Version of CakePHP to download from the CakePHP site.",
-  :default => "1.2.5"
+  :default => "2.4.3"
 
 attribute "cakephp/dir",
   :display_name => "CakePHP installation directory",

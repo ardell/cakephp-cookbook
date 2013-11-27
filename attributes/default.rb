@@ -19,12 +19,13 @@
 #
 
 # General settings
-default[:cakephp][:version] = "1.3.4"
-default[:cakephp][:dir] = "/var/www/cakephp"
-default[:cakephp][:db][:database] = "cakephpdb"
-default[:cakephp][:db][:user] = "cakephpuser"
+default['cakephp']['version'] = "2.4.3"
+default['cakephp']['dir'] = "/var/www/cakephp"
+default['cakephp']['db']['database'] = "cakephpdb"
+default['cakephp']['db']['user'] = "cakephpuser"
 
 ::Chef::Node.send(:include, Opscode::OpenSSL::Password)
 
-default[:cakephp][:db][:password] = secure_password
-default[:cakephp][:salt] = secure_password
+default['cakephp']['db']['password'] = secure_password
+default['cakephp']['salt'] = secure_password
+default['cakephp']['cipherSeed'] = secure_password
